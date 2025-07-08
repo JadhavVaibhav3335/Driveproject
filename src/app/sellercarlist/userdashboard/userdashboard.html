@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard - DriveXchange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1593055357429-62eaf3b259cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhciUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=100') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+    .sidebar {
+      width: 220px;
+      background-color: #1e293b;
+      color: white;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #334155;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: #1e293b;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .actions {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .action-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .action-card:hover {
+      transform: translateY(-5px);
+      background-color: #f1f5f9;
+    }
+
+    .action-card h4 {
+      font-size: 20px;
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
+
+    .action-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1e293b;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .action-card a:hover {
+      background-color: #0f172a;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>DriveXchange</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">My Listings</a>
+    <a href="#">Favorites</a>
+    <a href="#">Account Settings</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h1>Welcome, Vaishnavi 👋</h1>
+      <div>
+        <strong>Date:</strong> <span id="todayDate"></span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="card">
+        <h3>Total Listings</h3>
+        <p>12</p>
+      </div>
+      <div class="card">
+        <h3>Interested Buyers</h3>
+        <p>34</p>
+      </div>
+      <div class="card">
+        <h3>Saved Cars</h3>
+        <p>5</p>
+      </div>
+      <div class="card">
+        <h3>Profile Views</h3>
+        <p>78</p>
+      </div>
+    </div>
+
+    <!-- Buy & Sell Actions -->
+    <div class="actions">
+      <div class="action-card">
+        <h4>Buy a Car</h4>
+        <a href="buy.html">Go to Buy</a>
+      </div>
+      <div class="action-card">
+        <h4>Sell a Car</h4>
+        <a href="sell.html">Go to Sell</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const today = new Date();
+    document.getElementById("todayDate").innerText = today.toLocaleDateString();
+  </script>
+</body>
+</html>

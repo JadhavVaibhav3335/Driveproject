@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { Sellerform } from "./sellercarlist/sellerform/sellerform";
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone:true,
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
+
 })
 export class App {
-  protected title = 'Driveproject';
+
+  
+
 }
