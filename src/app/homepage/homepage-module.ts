@@ -15,4 +15,13 @@ import { Home } from './home/home';
     CommonModule
   ]
 })
-export class HomepageModule { }
+export class HomepageModule { 
+
+    scrollToNextSection() {
+    const current = document.querySelector('#services') as HTMLElement;
+    const next = current?.nextElementSibling;
+    if (next) {
+      (next as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}

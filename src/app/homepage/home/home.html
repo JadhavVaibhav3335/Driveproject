@@ -10,17 +10,24 @@
   <div class="overlay"></div>
 
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Your Trusted Partner in Car Exchange</h1>
-      <h2>DriveXchange</h2>
-      <p>Connecting Buyers and Sellers for Seamless Vehicle Transactions</p>
-      <p>List. Discover. Drive. Simple and Secure Vehicle Trading.</p>
-      <a href="#services" class="btn">Browse Cars</a>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="hero" id="home" data-aos="fade-up">
+  <div class="hero-content">
+    <h1>Your Trusted Partner in Car Exchange</h1>
+    <h2>DriveXchange</h2>
+    <p>Connecting Buyers and Sellers for Seamless Vehicle Transactions</p>
+    <p>List. Discover. Drive. Simple and Secure Vehicle Trading.</p>
+    <a href="javascript:void(0)" class="btn" (click)="browseCars()">Browse Cars</a>
+  </div>
 
+<div class="mouse-scroll" (click)="scrollToNextSection()" data-aos="fade-up">
+  <div class="mouse">
+    <div class="wheel"></div>
+  </div>
+  <p class="scroll-text">Scroll Down</p>
+</div>
 
+</section>
 
   <section  class="hero-section" id="services">
     <span style="color: black;padding: 10px;"><h1>What We Offer</h1></span>
@@ -50,12 +57,37 @@
     &copy; 2025 DriveXchange — Trusted Car Deals Made Easy.
   </footer>
 
+
+<script>
+  function scrollToNextSection() {
+    const next = document.querySelector('#services').nextElementSibling;
+    if (next) {
+      next.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Auto-hide mouse scroll indicator on scroll
+  const scrollIndicator = document.querySelector('.mouse-scroll');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollIndicator.style.opacity = '0';
+      scrollIndicator.style.pointerEvents = 'none';
+    } else {
+      scrollIndicator.style.opacity = '1';
+      scrollIndicator.style.pointerEvents = 'auto';
+    }
+  });
+</script>
+
+
+
   <script src="script.js"></script>
 </body>
 </html>
 
-<!-- 
-<app-sellerform></app-sellerform>
-<router-outlet></router-outlet> -->
+
+<!-- <app-sellerform></app-sellerform>
+<router-outlet></router-outlet>  -->
 
 

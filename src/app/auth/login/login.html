@@ -1,5 +1,5 @@
 <!-- Login 2 - Bootstrap Brain Component -->
-<div class="bg-light py-3 py-md-5">
+<div class="bg-light py-3 py-md-5 m-5">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
@@ -40,12 +40,12 @@
             <div class="col-12">
               <hr class="mt-5 mb-4 border-secondary-subtle">
               <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
-                <a href="#!" class="link-secondary text-decoration-none">Create new account</a>
-                <a href="#!" class="link-secondary text-decoration-none">Forgot password</a>
+                <button  class="text-decoration-none border-0" (click)="register()">Create new account</button>
+                <button class="text-decoration-none border-0" (click)="resetPassword()">Forgot password</button>
               </div>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-12">
               <p class="mt-5 mb-4">Or sign in with</p>
               <div class="d-flex gap-3 flex-column flex-md-row">
@@ -69,7 +69,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

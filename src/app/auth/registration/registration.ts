@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './registration.css'
 })
 export class Registration{
-  
+  constructor(private router: Router) {}
+  login() {
+    this.router.navigate(['/login']);
+  }
 }
