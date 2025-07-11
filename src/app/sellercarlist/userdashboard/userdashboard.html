@@ -188,21 +188,22 @@ body {
     </div>
 
     <!-- Buy & Sell Actions -->
-    <div class="actions">
-      <div class="action-card">
-        <h4>Buy a Car</h4>
-        <a href="buy.html">Go to Buy</a>
-      </div>
-      <div class="action-card">
-        <h4>Sell a Car</h4>
-        <a href="sell.html">Go to Sell</a>
-      </div>
-    </div>
+  <div class="actions">
+  <div class="action-card">
+    <h4>Buy a Car</h4>
+   <button (click)="goToBuy()">Go to Sell</button> <!-- Angular click -->
   </div>
+  <div class="action-card">
+    <h4>Sell a Car</h4>
+    <button (click)="goToSell()">Go to Sell</button> <!-- Angular click -->
+  </div>
+</div>
 
+  </div>
+<!-- 
   <script>
     const today = new Date();
     document.getElementById("todayDate").innerText = today.toLocaleDateString();
-  </script>
+  </script> -->
 </body>
 </html>

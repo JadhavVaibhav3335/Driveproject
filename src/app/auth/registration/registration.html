@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/registrations/registration-5/assets/css/registration-5.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form - DriveXchange</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/registrations/registration-5/assets/css/registration-5.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: url('https://images.unsplash.com/photo-1593055357429-62eaf3b259cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhciUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=100') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-bg-primary {
+      background-color: rgba(30, 41, 59, 0.95) !important;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,7 +37,7 @@
         <div class="col-12 col-md-6 text-bg-primary">
           <div class="d-flex align-items-center justify-content-center h-100">
             <div class="col-10 col-xl-8 py-3">
-              <img class="img-fluid rounded mb-4" loading="lazy" src="" width="245" height="80" alt="DriveXchange logo">
+              <img class="img-fluid rounded mb-4" loading="lazy" src="data:image/png;base64,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" width="245" height="80" alt="DriveXchange logo">
               <hr class="border-primary-subtle mb-4">
               <h2 class="h1 mb-4">We make digital products that drive you to stand out.</h2>
               <p class="lead m-0">We write words, take photos, make videos, and interact with artificial intelligence.</p>
@@ -26,35 +46,31 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="card-body p-3 p-md-4 p-xl-5">
-            <div class="row">
-              <div class="col-12">
-                <div class="mb-5">
-                  <h2 class="h3">Registration</h2>
-                  <h3 class="fs-6 fw-normal text-secondary m-0">Enter your details to register</h3>
-                </div>
-              </div>
+            <div class="mb-5">
+              <h2 class="h3">Registration</h2>
+              <h3 class="fs-6 fw-normal text-secondary m-0">Enter your details to register</h3>
             </div>
-            <form action="#!">
+            <form>
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
                   <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                 </div>
                 <div class="col-12">
                   <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
                 </div>
                 <div class="col-12">
                   <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                 </div>
                 <div class="col-12">
                   <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
-                  <input type="password" class="form-control" name="password" id="password" value="" required>
+                  <input type="password" class="form-control" id="password" required>
                 </div>
                 <div class="col-12">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required>
+                    <input class="form-check-input" type="checkbox" id="iAgree" required>
                     <label class="form-check-label text-secondary" for="iAgree">
                       I agree to the <a href="#!" class="link-primary text-decoration-none">terms and conditions</a>
                     </label>
@@ -62,41 +78,24 @@
                 </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn bsb-btn-xl btn-primary" type="submit">Sign up</button>
+                    <button class="btn btn-primary btn-lg" type="submit">Sign up</button>
                   </div>
                 </div>
               </div>
             </form>
-            <div class="row">
-              <div class="col-12">
-                <hr class="mt-5 mb-4 border-secondary-subtle">
-                <p class="m-0 text-secondary text-center">Already have an account? <a href="#!" class="link-primary text-decoration-none">Sign in</a></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <p class="mt-5 mb-4">Or sign in with</p>
-                <div class="d-flex gap-3 flex-column flex-xl-row">
-                  <a href="#!" class="btn bsb-btn-xl btn-outline-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                      <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
-                    </svg>
-                    <span class="ms-2 fs-6">Google</span>
-                  </a>
-                  <a href="#!" class="btn bsb-btn-xl btn-outline-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                    </svg>
-                    <span class="ms-2 fs-6">Facebook</span>
-                  </a>
-                  <a href="#!" class="btn bsb-btn-xl btn-outline-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                    </svg>
-                    <span class="ms-2 fs-6">Twitter</span>
-                  </a>
-                </div>
-              </div>
+            <hr class="mt-5 mb-4 border-secondary-subtle">
+            <p class="m-0 text-secondary text-center">Already have an account? <a href="#!" class="link-primary text-decoration-none">Sign in</a></p>
+            <p class="mt-5 mb-4">Or sign in with</p>
+            <div class="d-flex gap-3 flex-column flex-xl-row">
+              <a href="#!" class="btn btn-outline-primary btn-lg w-100">
+                <i class="bi bi-google me-2"></i> Google
+              </a>
+              <a href="#!" class="btn btn-outline-primary btn-lg w-100">
+                <i class="bi bi-facebook me-2"></i> Facebook
+              </a>
+              <a href="#!" class="btn btn-outline-primary btn-lg w-100">
+                <i class="bi bi-twitter me-2"></i> Twitter
+              </a>
             </div>
           </div>
         </div>
@@ -104,6 +103,6 @@
     </div>
   </div>
 </section>
-  
+
 </body>
 </html>

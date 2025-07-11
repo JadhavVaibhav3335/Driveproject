@@ -6,7 +6,7 @@ import { Sellerform } from "./sellercarlist/sellerform/sellerform";
 @Component({
   selector: 'app-root',
   standalone:true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, Sellerform],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 

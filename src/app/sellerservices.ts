@@ -16,10 +16,12 @@ export class Sellerservices {
   }
 
 
+
   two(){
    
     let url="http://localhost:8080/Seller/fetchseller"
-    return this.ht.get(url,{responseType:'text'});
+    return this.ht.get<Seller[]>(url);
   
   }
+
 }
