@@ -33,20 +33,19 @@
 </div>
 
 <style>
-  /* Full-page background image */
+  /* Full-page fixed background image */
   .page-background {
     min-height: 100vh;
-    background: url('https://images.unsplash.com/photo-1517142089942-ba376ce32a2e') no-repeat center center/cover;
+    background: url('https://cdn.pixabay.com/photo/2017/03/05/15/29/aston-martin-2118857_1280.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* keeps image fixed on scroll */
     padding: 40px;
   }
 
-  /* Container to center content */
   .table-container {
     max-width: 90%;
     margin: auto;
   }
 
-  /* Semi-transparent background for table */
   .transparent-table {
     background-color: rgba(218, 202, 202, 0.705);
     backdrop-filter: blur(4px);
@@ -54,7 +53,6 @@
     overflow: hidden;
   }
 
-  /* Custom borders */
   .custom-border,
   .custom-border th,
   .custom-border td {
