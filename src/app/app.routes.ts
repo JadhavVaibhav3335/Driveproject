@@ -7,13 +7,15 @@ import { ResetPassword } from './auth/reset-password/reset-password';
 
 export const routes: Routes = [
 
-
+  
+   
     {path:'',component:Home},
-    {path:'login',component:Login},
-    {path: 'registration', component: Registration },
+     {path:'login',component:Login},
+    { path: 'registration', component: Registration },
     {path:'buy', component:Userdashboard},
     {path:'sell',component:Userdashboard},
-    {path:'resetpassword', component:ResetPassword},
+    {path:'user', component:Login},
+     {path:'resetpassword', component:ResetPassword},
 
 
    

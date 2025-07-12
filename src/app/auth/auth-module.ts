@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Registration } from '../auth/registration/registration';
 import { Login } from './login/login';
 import { ResetPassword } from './reset-password/reset-password';
+import { RouterLink } from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ResetPassword } from './reset-password/reset-password';
   
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
     
   ]
 })
