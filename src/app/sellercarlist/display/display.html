@@ -1,0 +1,82 @@
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;">
+
+<div class="page-background">
+  <div class="table-container">
+    <h2 class="text-center mb-4">Car Listings</h2>
+    <table class="table custom-border transparent-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Fuel Type</th>
+          <th>Transmission</th>
+          <th>Price</th>
+          <th>Location</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of slist">
+          <td>{{ x.id }}</td>
+          <td>{{ x.model }}</td>
+          <td>{{ x.year }}</td>
+          <td>{{ x.fueltype }}</td>
+          <td>{{ x.transmission }}</td>
+          <td>{{ x.price }}</td>
+          <td>{{ x.location }}</td>
+          <td>{{ x.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  /* Full-page fixed background image */
+  .page-background {
+    min-height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2017/03/05/15/29/aston-martin-2118857_1280.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* keeps image fixed on scroll */
+    padding: 40px;
+  }
+
+  .table-container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .transparent-table {
+    background-color: rgba(218, 202, 202, 0.705);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .custom-border,
+  .custom-border th,
+  .custom-border td {
+    border: 3px solid #343a40;
+    border-collapse: collapse;
+  }
+
+  th {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+  }
+
+  td {
+    background-color: transparent;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000;
+  }
+</style>
